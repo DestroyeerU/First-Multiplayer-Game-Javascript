@@ -1,6 +1,11 @@
 export default function createKeyboardListener(document) {
   const state = {
-    observers: []
+    observers: [],
+    playerId: null
+  }
+
+  function registerPlayerId(playerId) {
+    state.playerId = playerId
   }
 
   function subscribe(observerFunction) {
@@ -17,9 +22,11 @@ export default function createKeyboardListener(document) {
 
   function handleKeyDown(event) {
     const keyPressed = event.key
+    const { playerId } = state
 
     const command = {
-      playerId: 'player1',
+      type: 'move-player',
+      playerId,
       keyPressed
     }
 
@@ -27,6 +34,7 @@ export default function createKeyboardListener(document) {
   }
 
   return {
-    subscribe
+    subscribe,
+    registerPlayerId
   }
 }

@@ -5,7 +5,13 @@
   "repository": "https://github.com/DestroyeerU/First-Multiplayer-Game-Javascript.git",
   "author": "DestroyeerU <destroyeeru18@gmail.com>",
   "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./server.js"
+  },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "socket.io": "^2.3.0"
   }
 }
