@@ -1,0 +1,11 @@
+{
+  "name": "first_multiplayer_game_js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DestroyeerU/First-Multiplayer-Game-Javascript.git",
+  "author": "DestroyeerU <destroyeeru18@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
